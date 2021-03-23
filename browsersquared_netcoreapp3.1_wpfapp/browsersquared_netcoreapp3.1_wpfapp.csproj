@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>netcoreapp3.1-windows</TargetFramework>
+        <RootNamespace>browsersquared_netcoreapp3._1_wpfapp</RootNamespace>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+</Project>
