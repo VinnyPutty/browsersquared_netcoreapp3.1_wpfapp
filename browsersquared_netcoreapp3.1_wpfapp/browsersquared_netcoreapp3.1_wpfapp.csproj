@@ -7,4 +7,27 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Remove="Images\Brave\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <None Remove="Images\Chrome\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <None Remove="Images\Edge\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <None Remove="Images\Firefox\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <None Remove="Images\Opera\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <None Remove="Images\Vivaldi\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <None Remove="Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Images\Brave\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <Resource Include="Images\Chrome\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <Resource Include="Images\Edge\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <Resource Include="Images\Firefox\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <Resource Include="Images\Opera\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+      <Resource Include="Images\Vivaldi\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MintPlayer.PlatformBrowser" Version="1.1.2" />
+    </ItemGroup>
+
 </Project>

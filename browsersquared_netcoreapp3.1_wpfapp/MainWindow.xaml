@@ -5,8 +5,146 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:browsersquared_netcoreapp3._1_wpfapp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Browser^2" Height="220" Width="1200" WindowStartupLocation="CenterScreen"
+        KeyDown="MainWindow_OnKeyDown" MouseDown="MainWindow_OnMouseDown"
+        Background="Transparent" AllowsTransparency="True"
+        WindowStyle="None" ResizeMode="NoResize" d:DataContext="{d:DesignData Source=MainWindow.xaml.cs }">
     <Grid>
+        <Border Background="Black" BorderThickness="2" CornerRadius="20" BorderBrush="#FF404040">
+            <StackPanel x:Name="RootPanel" HorizontalAlignment="Center" Height="180" VerticalAlignment="Center"
+                        Width="1180">
+                <StackPanel.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Black" Offset="1" />
+                        <GradientStop Color="#FFB00D0D" Offset="0" />
+                    </RadialGradientBrush>
+                </StackPanel.Background>
+                <Grid Height="180" Width="1180">
+                    <Image Height="160" Width="160" Margin="35,0,985,0"
+                           Source="/Images/Chrome/Square44x44Logo.altform-lightunplated_targetsize-256.png"
+                           Visibility="Visible" />
+                    <TextBlock Margin="35,0,985,8" VerticalAlignment="Bottom" Text="C" FontFamily="Verdana"
+                               FontSize="40"
+                               TextAlignment="Center" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}"
+                               Panel.ZIndex="2" Foreground="White" Background="Black" Opacity="0.6" Height="50"
+                               Width="50"
+                               IsHitTestVisible="False" />
+                    <Button Height="160" Width="160" Margin="35,0,985,0" Panel.ZIndex="1" x:Name="Chrome"
+                            Click="Chrome_OnClick" Background="Transparent" Opacity="0.2">
+                        <Button.OpacityMask>
+                            <ImageBrush
+                                ImageSource="/Images/Chrome/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                        </Button.OpacityMask>
+                    </Button>
+
+                    <Image Height="160" Width="160" Margin="225,0,795,0"
+                           Source="/Images/Edge/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                    <TextBlock Margin="225,0,795,8" VerticalAlignment="Bottom" Text="E" FontFamily="Verdana"
+                               FontSize="40"
+                               TextAlignment="Center" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}"
+                               Panel.ZIndex="2" Foreground="White" Width="50" Height="50" Background="Black"
+                               Opacity="0.6"
+                               IsHitTestVisible="False" />
+                    <Button Height="160" Width="160" Margin="225,0,795,0" x:Name="Edge" Click="Edge_OnClick"
+                            Opacity="0.2"
+                            Background="Transparent" Panel.ZIndex="1">
+                        <Button.OpacityMask>
+                            <ImageBrush
+                                ImageSource="/Images/Edge/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                        </Button.OpacityMask>
+                    </Button>
+
+                    <Image Height="160" Width="160" Margin="415,0,605,0"
+                           Source="/Images/Brave/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                    <TextBlock Margin="415,0,605,8" VerticalAlignment="Bottom" Text="B" FontFamily="Verdana"
+                               FontSize="40"
+                               TextAlignment="Center" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}"
+                               Panel.ZIndex="2" Width="50" Height="50" Opacity="0.6" Background="Black"
+                               Foreground="White"
+                               IsHitTestVisible="False" />
+                    <Button Height="160" Width="160" Margin="415,0,605,0" x:Name="Brave" Click="Brave_OnClick"
+                            Opacity="0.2" Background="Transparent" Panel.ZIndex="1">
+                        <Button.OpacityMask>
+                            <ImageBrush
+                                ImageSource="/Images/Brave/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                        </Button.OpacityMask>
+                    </Button>
+
+                    <Image Height="160" Width="160" Margin="605,0,415,0"
+                           Source="/Images/Firefox/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                    <TextBlock Margin="605,0,415,8" VerticalAlignment="Bottom" Text="F" FontFamily="Verdana"
+                               FontSize="40"
+                               TextAlignment="Center" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}"
+                               Panel.ZIndex="2" Width="50" Height="50" Opacity="0.6" Background="Black"
+                               Foreground="White"
+                               IsHitTestVisible="False" />
+                    <Button Height="160" Width="160" Margin="605,0,415,0" x:Name="Firefox" Click="Firefox_OnClick"
+                            Opacity="0.2" Background="Transparent" Panel.ZIndex="1">
+                        <Button.OpacityMask>
+                            <ImageBrush
+                                ImageSource="/Images/Firefox/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                        </Button.OpacityMask>
+                    </Button>
+
+                    <Image Height="160" Width="160" Margin="795,0,225,0"
+                           Source="/Images/Vivaldi/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                    <TextBlock Margin="795,0,225,8" VerticalAlignment="Bottom" Text="V" FontFamily="Verdana"
+                               FontSize="40"
+                               TextAlignment="Center" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}"
+                               Panel.ZIndex="2" Width="50" Height="50" Opacity="0.6" Background="Black"
+                               Foreground="White"
+                               IsHitTestVisible="False" />
+                    <Button Height="160" Width="160" Margin="795,0,225,0" x:Name="Vivaldi" Click="Vivaldi_OnClick"
+                            Opacity="0.2" Background="Transparent" Panel.ZIndex="1">
+                        <Button.OpacityMask>
+                            <ImageBrush
+                                ImageSource="/Images/Vivaldi/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                        </Button.OpacityMask>
+                    </Button>
+
+                    <Image Height="160" Width="160" Margin="985,0,35,0"
+                           Source="/Images/Opera/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                    <TextBlock Margin="985,0,35,8" VerticalAlignment="Bottom" Text="O" FontFamily="Verdana"
+                               FontSize="40"
+                               TextAlignment="Center" FontWeight="Normal" FontStyle="Normal" TextDecorations="{x:Null}"
+                               Panel.ZIndex="2" Width="50" Height="50" Opacity="0.6" Background="Black"
+                               Foreground="White"
+                               IsHitTestVisible="False" />
+                    <Button Height="160" Width="160" Margin="985,0,35,0" Panel.ZIndex="1" x:Name="Opera"
+                            Click="Opera_OnClick" Opacity="0.2" Background="#00000000">
+                        <Button.OpacityMask>
+                            <ImageBrush
+                                ImageSource="/Images/Opera/Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+                        </Button.OpacityMask>
+                    </Button>
+
+
+                    <Border BorderThickness="2" CornerRadius="7" Width="1140" Height="25" Margin="0,-50,0,140">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <LinearGradientBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterY="0.5" CenterX="0.5" />
+                                        <SkewTransform CenterY="0.5" CenterX="0.5" />
+                                        <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5" />
+                                        <TranslateTransform />
+                                    </TransformGroup>
+                                </LinearGradientBrush.RelativeTransform>
+                                <GradientStop Color="#FF1D1D1D" Offset="1" />
+                                <GradientStop Color="#FF5F5B5B" Offset="0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <TextBlock x:Name="Passed_URI" HorizontalAlignment="Center"
+                                   Text="{Binding PassedUri, FallbackValue=URL not received}" TextWrapping="Wrap"
+                                   VerticalAlignment="Center" Width="1110" FontFamily="Calibri" FontSize="16"
+                                   IsEnabled="False" Cursor="None" Foreground="White">
+
+                        </TextBlock>
+                    </Border>
+                </Grid>
+            </StackPanel>
+        </Border>
+
 
     </Grid>
 </Window>
